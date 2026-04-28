@@ -1,14 +1,21 @@
-def nactiCislo():
-    return int(input("zadejte cislo"))
-
-prvniCislo = nactiCislo()
-druheCislo = nactiCislo()
-operace = int(input("zadejte operaci: 1 - scitani, 2 - odcitani, 3 - nasobeni, 4 - deleni"))
-if(operace == 1):
-    print(prvniCislo + druheCislo)
-elif(operace == 2):
-    print(prvniCislo - druheCislo)
-elif(operace == 3):
-    print(prvniCislo * druheCislo)
-else:
-    print(prvniCislo / druheCislo)
+ 
+def nacticislo():
+   cislo1 = int(input("Zadejte prvni cislo: "))
+   cislo2 = int(input("Zadejte druhe cislo: "))
+   operace = input("Zadejte operaci (1 = +, 2 = -, 3 = *, 4 = /, o = odmocnina, m = mocnina): ")
+   if operace == "1":
+       print(cislo1 + cislo2)
+   elif operace == "2":
+       print(cislo1 - cislo2)
+   elif operace == "3":
+       print(cislo1 * cislo2)
+   elif operace == "4":
+       print(cislo1 / cislo2)
+   elif operace == "o":
+       print(cislo1 ** (1 / cislo2))
+   elif operace == "m":
+       print(cislo1 ** cislo2)
+   
+       
+nacticislo()
+ 
