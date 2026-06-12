@@ -6,20 +6,26 @@ class Clovek:
         self.pohlavi = pohlavi
         self.vek = vek
 
+    def __str__(self):
+        return f"Clovek => Jmeno: {self.jmeno}, Prijimeni: {self.prijmeni}, Pohlavi: {self.pohlavi}, vek: {self.vek}"
+
     def jeMuz(self):
         if (self.pohlavi == "muz" or self.pohlavi == "muž"):
             return True
         else:
             return False
                 
-honza = Clovek("Honza", "Novák", "muž", 20)
-petr = Clovek()
-petr.jmeno = "Petr"
-petr.prijmeni = "Dostál"
-petr.pohlavi = "muž"
-petr.vek = 18
-print(honza.jmeno)
-print("Je muž?", honza.jeMuz())
-print(petr.jmeno)
-print("Je muž?", petr.jeMuz())
+zaci = []
+zaci.append(Clovek("sam", "bakri", "muž", 18))
+zaci.append(Clovek("armin", "lyavynets", "muž", 18))
+zaci.append(Clovek("david", "reschke", "muž", 19))
+zaci.append(Clovek("naty", "bakri", "zena", 19))
+zaci.append(Clovek("nicholas", "ras", "muž", 18))
+zaci.append(Clovek("matej", "klima", "muž", 33))
+
+for zak in zaci:
+    print(zak)
+
+
+
 
